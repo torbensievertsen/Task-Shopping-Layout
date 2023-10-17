@@ -4,7 +4,10 @@
 html {
   font-family: "Quicksand", sans-serif;
   color: gray;
+}
+:root {
   --Head-Color: black;
+  --clr-dot: #485fb9;
 }
 
 .body {
@@ -14,10 +17,11 @@ html {
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 4rem;
+  background-color: rgba(128, 128, 128, 0.091);
 }
 h2 {
   color: var(--Head-Color);
-  font-weight: 800;
+  font-weight: 700;
   padding-left: 1rem;
 }
 .figure {
@@ -28,16 +32,19 @@ h2 {
 .dot {
   height: 25px;
   width: 25px;
-  background-color: red;
   border-radius: 50%;
   display: inline-block;
+  background-color: var(--clr-dot);
+  margin: 0.25rem;
 }
 .article_img {
   max-width: 100%;
-  overflow: hidden;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
+  -webkit-mask-image: linear-gradient(#000 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0));
 }
+
 .Batch {
   display: inline;
   font-weight: bold;
@@ -53,10 +60,11 @@ h2 {
 .Picture-Description {
   position: absolute;
   bottom: 0.5rem;
+  font-size: 0.8rem;
 }
 .article {
-  border: solid 2px black;
   border-radius: 2rem;
+  background-color: white;
 }
 .Description {
   margin: 1rem;
@@ -82,6 +90,8 @@ h2 {
   border-radius: 0.5rem;
   padding: 0.5em;
   font-size: 1.5rem;
+  color: black;
+  font-weight: 700;
 }
 .Size {
   grid-area: Size;
@@ -90,7 +100,10 @@ h2 {
   grid-area: Quantity;
 }
 .Color {
+  display: flex;
   grid-area: Color;
+  align-items: center;
+  padding: 0.5rem;
 }
 .Add-to-Cart {
   grid-area: Add;
@@ -101,4 +114,49 @@ h2 {
   border-radius: 0.5rem;
   padding: 0.5em;
   font-size: 1.5rem;
+}
+.One {
+  --clr-dot: #485fb9;
+}
+.Two {
+  --clr-dot: rgba(255, 0, 0, 0.63);
+}
+.Three {
+  background-color: black;
+}
+.four {
+  background: linear-gradient(
+    90deg,
+    rgba(176, 145, 1, 1) 50%,
+    rgb(0, 0, 0) 50%
+  );
+}
+.five {
+  background: linear-gradient(
+    90deg,
+    rgba(99, 62, 231, 0.658) 50%,
+    rgb(0, 0, 0) 50%
+  );
+}
+.six {
+  background: linear-gradient(
+    90deg,
+    rgba(194, 51, 144, 0.605) 50%,
+    rgb(0, 0, 0) 50%
+  );
+}
+.seven {
+  background: linear-gradient(
+    90deg,
+    rgb(156, 40, 40) 50%,
+    rgb(255, 255, 255) 50%
+  );
+}
+.eight {
+  background: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 50%);
+}
+select {
+  border: none;
+  width: 5ch;
+  margin-left: 0.5rem;
 }
